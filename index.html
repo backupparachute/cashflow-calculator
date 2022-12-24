@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			BPS Cashflow Calculator
+		</title>
+	    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Fathom - beautiful, simple website analytics -->
+<script src="https://cdn.usefathom.com/script.js" data-site="EABOZEKF" defer></script>
+<!-- / Fathom -->
+
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://backupparachute.com/css/tools.css">
+
+		<style media="screen">
+		</style>
+	</head>
+	<body class="calc-body">
+
+		<div class="jumbotron jumbotron-fluid">
+
+		  <div class="container">
+				<div class="row">
+				<div class="col-12 mt-3 text-center">
+				    <h1 class="bold-header-4 display-4">Cashflow Calculator</h1>
+					</div>
+
+				</div>
+		  </div>
+		</div>
+
+		<div class="container">
+
+			<div class="row mt-4">
+
+				<div class="col text-center">
+					<a href="https://contrarianthinking.co/?utm_source=backupparachute&utm_medium=logo&utm_campaign=cashflow_calculator" blank="_target" class="mt-2">
+						<img src="https://i0.wp.com/contrarianthinking.co/wp-content/uploads/2022/05/logo.png?fit=225%2C52&ssl=1" class="img-fluid">
+					</a>
+					<p class="lead "><a href="https://contrarianthinking.co/?utm_source=backupparachute&utm_medium=logo&utm_campaign=tranche_calculator" class="highlight">Join 200k+ others for the most actionable newsletter to free your mind and grow your bank account.</a></p>
+<!-- https://contrarian-thinking.ck.page/car-wash -->
+<!-- https://contrarianthinking.co/how-to-buy-a-car-wash/ -->
+				</div>
+			</div>
+
+			<div class="row mt-4">
+
+				<div class="col-md-4">
+					<div class="card mb-3">
+					  <div class="card-body">
+					    <h5 class="card-title">Loan Payment Calculator</h5>
+
+						<div class="form-group mb-3 mt-3">
+							<label for="offer-price">Offer Price</label>
+							<div class="input-group input-group-sm mb-3">
+								<div class="input-group-prepend">
+									<span class="input-group-text">$</span>
+								</div>
+									<input class="form-control" type="number" name="offer-price" value="250000" min="0" step="25000" id="offer-price">
+								<div class="input-group-append">
+									<span class="input-group-text">.00</span>
+								</div>
+							</div>
+
+						</div>
+
+
+						<label for="downpayment-perc">Downpayment </label>
+						<div class="input-group input-group-sm mb-3">
+							<input class="form-control" type="number" name="downpayment-perc" value="20" min="0.1" step="0.1" id="downpayment-perc" >
+						  <div class="input-group-append me-3">
+						    <span class="input-group-text" id="basic-addon2">%</span>
+						  </div>
+
+								<div class="input-group-prepend">
+									<span class="input-group-text">$</span>
+								</div>
+									<input class="form-control" type="number" name="downpayment" value="0" min="0" step="1000" id="downpayment" disabled>
+									<div class="input-group-append">
+										<span class="input-group-text">.00</span>
+									</div>
+						</div>
+
+						<label for="loanamount">Loan Amount </label>
+						<div class="input-group input-group-sm mb-3">
+
+								<div class="input-group-prepend">
+									<span class="input-group-text">$</span>
+								</div>
+								<input class="form-control" type="number" name="loanamount" value="0" min="0" step="1000" id="loanamount" >
+								<div class="input-group-append">
+									<span class="input-group-text">.00</span>
+								</div>
+
+						</div>
+
+						<label for="booked_to_held">Interest Rate</label>
+						<div class="input-group input-group-sm mb-3">
+							<input class="form-control" type="number" name="interest-rate" value="5.0" min="0" step="0.1" id="interest-rate" >
+						  <div class="input-group-append">
+						    <span class="input-group-text" id="basic-addon2">%</span>
+						  </div>
+						</div>
+
+
+						<label for="loanamount">Term <small>(years)</small> </label>
+						<div class="input-group input-group-sm mb-3">
+								<input class="form-control" type="number" name="term" value="7" min="0" step="0.1" id="term" >
+						</div>
+
+						<label for="payment">Payment</label>
+						<div class="input-group input-group-sm mb-3">
+								<input class="form-control" type="text" name="payment" value="0" min="0" step="1" id="payment" disabled>
+						</div>
+
+					  </div>
+					</div>
+
+
+
+				</div>
+
+				<div class="col-md-4">
+					<div class="card mb-3">
+						<div class="card-body">
+							<h5 class="card-title">Revenue <small>(Money In)</small></h5>
+
+						<div class="form-group mb-3 mt-3">
+							<label for="monthly-revenue">Money In <small>(Monthly Business Revenue)</small></label>
+							<div class="input-group input-group-sm mb-3">
+								<div class="input-group-prepend">
+									<span class="input-group-text">$</span>
+								</div>
+									<input class="form-control" type="number" name="monthly-revenue" value="33333.33" min="0" step="100" id="monthly-revenue">
+								<!-- <div class="input-group-append">
+									<span class="input-group-text">.00</span>
+								</div> -->
+							</div>
+
+						</div>
+
+
+						<label for="add-monthly-income">Additional Monthly Income</label>
+						<div class="input-group input-group-sm mb-3">
+
+								<div class="input-group-prepend">
+									<span class="input-group-text">$</span>
+								</div>
+								<input class="form-control" type="number" name="add-monthly-income" value="" min="0" step="100" id="add-monthly-income" >
+								<!-- <div class="input-group-append">
+									<span class="input-group-text">.00</span>
+								</div> -->
+
+						</div>
+
+						<label for="total-income">Total Income</label>
+						<div class="input-group input-group-sm mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text">$</span>
+							</div>
+								<input class="form-control" type="number" name="total-income" value="" min="0" step="1" id="total-income" disabled>
+						</div>
+
+						<!-- <label for="total-income">Annual Gross Revenue</label>
+						<div class="input-group input-group-sm mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text">$</span>
+							</div>
+								<input class="form-control" type="number" name="annual-gross-revenue" value="" min="0" step="1" id="annual-gross-revenue" disabled>
+						</div>
+ -->
+
+						</div>
+					</div>
+
+
+				<div class="card mb-3">
+				<div class="card-body">
+					<h5 class="card-title">Expenses</h5>
+
+					<div id="chart-1" style="height: 175px;"></div>
+
+				</div>
+			</div>
+
+
+
+				</div>
+
+				<div class="col-md-4">
+					<div class="card mb-3">
+						<div class="card-body">
+							<h5 class="card-title">Expenses <small>(Money Out)</small></h5>
+
+						<div class="form-group mb-3 mt-3">
+							<label for="operating-expenses">Operating Expenses <small>(Monthly Avg Rev - Monthly SDE)</small></label>
+							<div class="input-group input-group-sm mb-3">
+								<div class="input-group-prepend">
+									<span class="input-group-text">$</span>
+								</div>
+									<input class="form-control" type="number" name="operating-expenses" value="25000" min="0" step="100" id="operating-expenses">
+								<!-- <div class="input-group-append">
+									<span class="input-group-text">.00</span>
+								</div> -->
+							</div>
+
+						</div>
+
+
+						<label for="sba-loan-payment">SBA Loan Payment</label>
+						<div class="input-group input-group-sm mb-3">
+
+								<!-- <div class="input-group-prepend">
+									<span class="input-group-text">$</span>
+								</div> -->
+								<input class="form-control" type="text" name="sba-loan-payment" value="" min="0" step="" id="sba-loan-payment" disabled>
+								<!-- <div class="input-group-append">
+									<span class="input-group-text">.00</span>
+								</div> -->
+
+						</div>
+
+						<label for="investor-payments">Investor Payments</label>
+						<div class="input-group input-group-sm mb-3">
+
+								<div class="input-group-prepend">
+									<span class="input-group-text">$</span>
+								</div>
+								<input class="form-control" type="number" name="investor-payments" value="" min="0" step="100" id="investor-payments" >
+								<!-- <div class="input-group-append">
+									<span class="input-group-text">.00</span>
+								</div> -->
+
+						</div>
+
+						<label for="equipment-loans">Equipment Loans</label>
+						<div class="input-group input-group-sm mb-3">
+
+								<div class="input-group-prepend">
+									<span class="input-group-text">$</span>
+								</div>
+								<input class="form-control" type="number" name="equipment-loans" value="" min="0" step="100" id="equipment-loans" >
+								<!-- <div class="input-group-append">
+									<span class="input-group-text">.00</span>
+								</div> -->
+
+						</div>
+
+						<label for="seller-finance-payments">Seller Finance Payments</label>
+						<div class="input-group input-group-sm mb-3">
+
+								<div class="input-group-prepend">
+									<span class="input-group-text">$</span>
+								</div>
+								<input class="form-control" type="number" name="seller-finance-payments" value="" min="0" step="10" id="seller-finance-payments" >
+								<!-- <div class="input-group-append">
+									<span class="input-group-text">.00</span>
+								</div> -->
+
+						</div>
+
+
+						<label for="total-monthly-exp">Total Monthly Expenses</label>
+						<div class="input-group input-group-sm mb-3">
+							<!-- <div class="input-group-prepend">
+								<span class="input-group-text">$</span>
+							</div> -->
+								<input class="form-control" type="text" name="total-monthly-exp" value="" min="0" step="1" id="total-monthly-exp" disabled>
+							<!-- <div class="input-group-append">
+								<span class="input-group-text">.00</span>
+							</div> -->
+						</div>
+
+						<!-- <label for="total-monthly-exp">Total Annual Expenses</label>
+						<div class="input-group input-group-sm mb-3">
+								<input class="form-control" type="text" name="total-annual-exp" value="" min="0" step="1" id="total-annual-exp" disabled>
+						</div> -->
+
+						</div>
+					</div>
+
+				</div>
+
+			</div> <!-- end of row -->
+
+
+			<!-- SDE DEF: Seller’s Discretionary Earnings.  This term is also referred to as adjusted cash flow or business cash flow.  In short, SDE is the monetary value (in dollars) the owner(s) receive for owning the business.  It is the small business equivalent of EBITDA. -->
+
+
+		<div class="row mt-3">
+
+			<div class="col-md-4">
+
+				<div class="card mb-3 bg-success text-white" style="--bs-bg-opacity: .9;">
+					<div class="card-body ">
+						<h5 class="card-title">Profit <small>(The Fun Part)</small> </h5>
+
+
+				<table class="table text-white">
+				  <thead>
+				    <tr>
+				      <th scope="col"></th>
+				      <th scope="col" id="per-rnd-header"></th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr id="first">
+				      <th class="font-weight-bold">Income Minus Expenses <small>(Monthly)</small> </th>
+				      <td class="per-rnd">
+								<div class="input-group input-group-sm">
+								  	<input class="form-control" type="text" name="monthly-income-minus-exp" value="15.00" min="0" step=".01" id="monthly-income-minus-exp" disabled>
+								</div>
+							</td>
+				    </tr>
+						<tr id="second">
+							<th class="font-weight-bold">Annual Profit Before Debt Payback</th>
+							<td class="per-rnd">
+								<div class="input-group input-group-sm">
+										<input class="form-control" type="text" name="annual-profit-before-debt-payback" value="85.00" min="0" step=".01" id="annual-profit-before-debt-payback" disabled>
+								</div>
+							</td>
+						</tr>
+						<tr id="third">
+							<th class="font-weight-bold">Profit After Dept Payback</th>
+							<td class="per-rnd">
+								<div class="input-group input-group-sm">
+										<input class="form-control" type="text" name="profit-after-debt-payback" value="0" min="0" step=".01" id="profit-after-debt-payback" disabled>
+								</div>
+							</td>
+						</tr>
+				  </tbody>
+				</table>
+
+
+			</div>
+		</div>
+
+
+	</div> <!-- end of col -->
+
+	<div class="col-md-4">
+
+		<div class="card mb-3">
+			<div class="card-body">
+				<h5 class="card-title">Total Return on Initial Investment <small>(Based on Zero Growth)</small> </h5>
+
+
+		<table class="table">
+			<thead>
+				<tr>
+					<th scope="col">Year</th>
+					<th scope="col" id="per-rnd-header">% Return</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr id="first">
+					<th class="font-weight-bold">Year 1</th>
+					<td class="per-rnd">
+						<div class="input-group input-group-sm">
+								<input class="form-control" type="number" name="total-return-year-one" value="15.00" min="0" step=".01" id="total-return-year-one" disabled>
+								<div class="input-group-append">
+									<span class="input-group-text" id="basic-addon2">%</span>
+								</div>
+						</div>
+					</td>
+				</tr>
+				<tr id="second">
+					<th class="font-weight-bold">Year 2</th>
+					<td class="per-rnd">
+						<div class="input-group input-group-sm">
+								<input class="form-control" type="number" name="total-return-year-two" value="85.00" min="0" step=".01" id="total-return-year-two" disabled>
+								<div class="input-group-append">
+									<span class="input-group-text" id="basic-addon2">%</span>
+								</div>
+						</div>
+					</td>
+				</tr>
+				<tr id="third">
+					<th class="font-weight-bold">Year 3</th>
+					<td class="per-rnd">
+						<div class="input-group input-group-sm">
+								<input class="form-control" type="number" name="total-return-year-three" value="0" min="0" step=".01" id="total-return-year-three" disabled>
+								<div class="input-group-append">
+									<span class="input-group-text" id="basic-addon2">%</span>
+								</div>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+
+	</div>
+</div>
+
+
+</div> <!-- end of col -->
+
+
+	<div class="col-md-4">
+
+		<div class="card mb-3">
+			<div class="card-body">
+				<h5 class="card-title">Multple Chart</h5>
+
+
+		<table class="table">
+			<thead>
+				<tr>
+					<th scope="col">Purchase Price</th>
+					<th scope="col" id="per-rnd-header">Multiple of SDE</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr id="first">
+					<td class="font-weight-bold"><input class="form-control" type="text" name="purchase-price-two" value="0" min="0" step=".01" id="purchase-price-two" disabled></td>
+					<td class="per-rnd">
+						<div class="input-group input-group-sm">
+								<input class="form-control" type="number" name="multiple-sde-two" value="2.0" min="0" step=".01" id="multiple-sde-two" disabled>
+								<div class="input-group-append">
+									<span class="input-group-text" id="basic-addon2">%</span>
+								</div>
+						</div>
+					</td>
+				</tr>
+				<tr id="second">
+					<td class="font-weight-bold"><input class="form-control" type="text" name="purchase-price-two-half" value="0" min="0" step=".01" id="purchase-price-two-half" disabled></td>
+					<td class="per-rnd">
+						<div class="input-group input-group-sm">
+								<input class="form-control" type="number" name="multiple-sde-two-half" value="2.5" min="0" step=".01" id="multiple-sde-two-half" disabled>
+								<div class="input-group-append">
+									<span class="input-group-text" id="basic-addon2">%</span>
+								</div>
+						</div>
+					</td>
+				</tr>
+				<tr id="third">
+					<td class="font-weight-bold"><input class="form-control" type="text" name="purchase-price-three" value="0" min="0" step=".01" id="purchase-price-three" disabled></td>
+					<td class="per-rnd">
+						<div class="input-group input-group-sm">
+								<input class="form-control" type="number" name="multiple-sde-three" value="3.0" min="0" step=".01" id="multiple-sde-three" >
+								<div class="input-group-append">
+									<span class="input-group-text" id="basic-addon2">%</span>
+								</div>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+
+	</div>
+</div>
+
+
+</div> <!-- end of col -->
+
+</div> <!-- end of row -->
+
+		<div id="footer" class="row mt-5">
+
+				<div class="copyright col">
+					&copy;<span id="copyright_year"></span> Backup Parachute Software LLC
+				</div>
+
+			</div>	</div> <!-- end container -->
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="javascript/calc.js" type="text/javascript"></script>
+<script src="https://backupparachute.com/scripts/copyright.js" type="text/javascript"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/chartkick@3.0.1/dist/chartkick.js" crossorigin="anonymous"></script>
+
+<script src="https://backupparachute.com/scripts/tool_nav.js" type="text/javascript" data-campaign="cashflow-calculator"></script>
+<script src="https://backupparachute.com/scripts/ads.js" type="text/javascript" data-campaign="app-ad"></script>
+
+
+	</body>
+</html>
